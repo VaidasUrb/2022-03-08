@@ -1,0 +1,24 @@
+<h2>Sveiki prisijungę, {{user}}</h2>
+<a href="/logout">Atsijungti</a>
+{{#if zmones}}
+    <table>
+        <thead>
+            <th>Vardas</th>
+            <th>Pavardė</th>
+            <th>Adresas</th>
+            <th>Telefonas</th>
+            <th>El. paštas</th>
+        </thead>
+        <tbody>
+            {{#each zmones}}
+                <tr>
+                    <td>{{this.vardas}}</td>
+                    <td>{{this.pavarde}}</td>
+                    <td>{{this.adresas}}</td>
+                    <td>{{this.telefonas}}</td>
+                    <td>{{this.emailas}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{/if}}
